@@ -1,20 +1,11 @@
-import Image from 'next/image'
-import { Button } from '@/components/ui/button'
+import ProductList from '@/components/shared/product/product-list'
+import sampleData from '@/lib/sample-data'
 
 export default function Home() {
   return (
-    <div>
-      <h1>Hello World</h1>
-      <Button className="bg-red-500">버튼</Button>
-      <Button>button</Button>
-      <br />
-      <Button variant="destructive">button-destructive</Button>
-      <Button variant="destructive" size="lg">
-        button-default1
-      </Button>
-      <Button variant="secondary" size="sm">
-        button-secondary
-      </Button>
+    <div className="space-y-8">
+      <h2 className="h2-bold">Latest Products</h2>
+      <ProductList data={sampleData.products} />
     </div>
   )
 }
